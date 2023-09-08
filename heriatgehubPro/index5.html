@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto;
+
+    }
+
+
+
+
+    /* /////////////////////////////////////// navbar //////////////////////////////////////////////// */
+
+    nav {
+        padding: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.6);
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav .logo {
+        color: orange;
+        font-size: 30px;
+        font-weight: bolder;
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0 20px;
+
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: black;
+        transition: ease-in-out;
+        transition-duration: 0.2s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+        color: orange;
+    }
+
+    nav .searchBar {
+        margin: 1px;
+        border: 1px solid orange;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        transition: ease-in-out;
+        transition-duration: 0.2s;
+    }
+
+    nav .searchBar:hover {
+        margin: 0;
+        border: 2px solid orange;
+    }
+
+    nav .searchBar input {
+        border: none;
+        text-align: center;
+        height: 30px;
+        width: 200px;
+    }
+
+    nav .searchBar input:focus {
+        outline: none;
+    }
+
+    nav .searchBar button {
+        border: none;
+        background-color: orange;
+        text-align: center;
+        height: 30px;
+        width: 30px;
+        transition: ease-in-out;
+        transition-duration: 0.2s;
+    }
+
+    nav .searchBar button:hover {
+        font-size: large;
+    }
+
+
+
+
+
+    /* ////////////////////////////////// categories container ////////////////////////////////////////////// */
+
+    .scroll-cantainer {
+        position: relative;
+        border: 1px solid rgba(0, 0, 0, 0.6);
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        margin: 5px auto;
+        /* border-radius: 4px; */
+        overflow: hidden;
+    }
+
+    .scroll-cantainer ul {
+        display: flex;
+        gap: 60px;
+        list-style: none;
+        margin: 0;
+        padding: 12px 60px;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+    }
+
+    .scroll-cantainer ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    .scroll-cantainer ul a {
+        color: black;
+        border: 1px solid rgba(0, 0, 0, 0.614);
+        text-decoration: none;
+        padding: 4px 24px;
+        display: inline-block;
+        border-radius: 4px;
+        user-select: none;
+        white-space: nowrap;
+    }
+
+    .scroll-cantainer ul a.active {
+        background-color: orange;
+        border: 1px solid orange;
+    }
+
+    .scroll-cantainer ul a:hover {
+        border: 1px solid orange;
+    }
+
+    .scroll-cantainer i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        padding: 8px;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    .scroll-cantainer i:hover {
+        background-color: #00000009;
+    }
+
+    .scroll-cantainer .right-arrow,
+    .scroll-cantainer .left-arrow {
+        position: absolute;
+        height: 100%;
+        width: 90px;
+        top: 0;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .scroll-cantainer .right-arrow.active,
+    .scroll-cantainer .left-arrow.active {
+        display: inline-flex;
+    }
+
+    .scroll-cantainer .right-arrow {
+        right: 0;
+        justify-content: flex-end;
+        background: linear-gradient(to left, white 50%, transparent);
+    }
+
+    .scroll-cantainer .left-arrow {
+        background: linear-gradient(to right, white 50%, transparent);
+    }
+
+
+    /* ///////////////////////////////////// hero section ////////////////////////////////////////////////// */
+
+    .hero-container {
+        overflow: hidden;
+        padding: 5px;
+        /* border-radius: 4px; */
+        border: 1px solid rgba(0, 0, 0, 0.6);
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        width: 90%;
+        height: 80vh;
+        margin: 30px auto;
+    }
+
+    .hero-container .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-container .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hero-container .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .hero-container .hero-img {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .heroImg1 {
+        background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.219), rgba(0, 0, 0, 0.502)), url("https://necessityestore.in/wp-content/uploads/2022/10/13.-India_s-Handicraft-Industry-Gaining-Momentum-10-Best-Corporate-Leaders-From-Jaipur-2021.jpg");
+    }
+
+    .heroImg2 {
+        background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.219), rgba(0, 0, 0, 0.502)), url("https://startuppakistan.com.pk/wp-content/uploads/2021/08/handicrafts-from-pakistan-or-mypakpartner-com.jpeg");
+    }
+
+    .heroImg3 {
+        background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.219), rgba(0, 0, 0, 0.502)), url("https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/bd39862d8902e0497c4a41833b523a70.jpg");
+    }
+
+    .hero-container .hero-img h1 {
+        font-size: 70px;
+        text-shadow: 0px 0px 20px black;
+    }
+
+    .hero-container .hero-img p {
+        font-size: 30px;
+        text-shadow: 0px 0px 20px black;
+    }
+
+    .hero-container .hero-img a {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        margin: 10px auto;
+        color: white;
+        border-radius: 5px;
+        height: 40px;
+        width: 100px;
+        background-color: orange;
+        border: 2px solid white;
+        box-shadow: 0px 0px 20px black;
+        transition: ease-in-out;
+        transition-duration: 0.2s;
+    }
+
+    .hero-container .hero-img a:hover {
+        border: 1px solid white;
+        font-size: 16px;
+    }
+
+
+
+
+    /* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+    .img-container .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .img-container .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-container .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .img-container {
+        border-top: 1px solid rgba(0, 0, 0, 0.537);
+        padding: 0 10px;
+        height: 220px;
+        width: auto;
+    }
+
+    .img-container .img-box {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        width: 300px;
+        background-color: black;
+    }
+
+    .img-container .img-box h2 {
+        text-shadow: 0px 0px 15px black;
+        color: #ffffff;
+        font-size: 25px;
+        position: absolute;
+        transition-duration: 0.5s;
+    }
+
+    .img-container .swiper-slide img {
+        opacity: 0.7;
+        transition-duration: 0.5s;
+    }
+
+    .img-container .swiper-slide:hover h2 {
+        opacity: 0.5;
+    }
+
+    .img-container .swiper-slide:hover img {
+        opacity: 1;
+    }
+
+
+
+
+
+    /* ////////////////////////////////////////////////////////////////////////////////// */
+    .subTitle {
+        text-align: center;
+        font-size: 50px;
+        margin-top: 100px;
+    }
+</style>
+
+<body>
+
+    <nav>
+        <div class="logo">heritagehub</div>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Become Seller</a></li>
+            <li><a href="#">Cart <i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+        <form action="#">
+            <div class="searchBar">
+                <input type="text" placeholder="Search your product">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </form>
+    </nav>
+
+    <div class="scroll-cantainer">
+        <div class="left-arrow">
+            <i class="fa-solid fa-chevron-left" id="categories-left-arrow"></i>
+        </div>
+        <ul id="categories-list">
+            <li><a href="#" class="active">All</a></li>
+            <li><a href="#">Paintings</a></li>
+            <li><a href="#">Cloths</a></li>
+            <li><a href="#">Wood Craft</a></li>
+            <li><a href="#">Embroidery</a></li>
+            <li><a href="#">Toys</a></li>
+            <li><a href="#">Metal Work</a></li>
+            <li><a href="#">Carpets</a></li>
+            <li><a href="#">Bamboo Craft</a></li>
+            <li><a href="#">Jewellery</a></li>
+        </ul>
+        <div class="right-arrow">
+            <i class="fa-solid fa-chevron-right" id="categories-right-arrow"></i>
+        </div>
+    </div>
+
+    <div class="hero-container">
+        <div class="swiper mySwiper mySwiper-heroSection">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="hero-img heroImg1">
+                        <h1>Heritagehub</h1>
+                        <p>Best Collection Of Indian Heritage Art And Culture</p>
+                        <a href="#gg">Shop Now</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-img heroImg2">
+                        <h1>Heritagehub</h1>
+                        <p>See Best Collection Of Artworks Form Your State</p>
+                        <a href="#stateContainer">View</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-img heroImg3">
+                        <h1>Heritagehub</h1>
+                        <p>Support Local Artists To Continue The Tradition</p>
+                        <a href="#gg">Buy Item</a>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <h2 class="subTitle" id="stateContainer">Select From Your State</h2>
+    <div class="img-container">
+        <div class="swiper mySwiper mySwiper-stageContainer">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/andraPradesh.jpeg" alt="">
+                        <h2>AndraPradesh</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/arunachaPradesh.jpg" alt="">
+                        <h2>ArunachaPradesh</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/assam.jpg" alt="">
+                        <h2>Assam</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/bihar.jpg" alt="">
+                        <h2>Bihar</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/chhattisgarh.jpg" alt="">
+                        <h2>Chhattisgarh</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/delhi.jpg" alt="">
+                        <h2>Delhi</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/goa.jpg" alt="">
+                        <h2>Goa</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/gujarat.jpg" alt="">
+                        <h2>Gujarat</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/haryana.jpg" alt="">
+                        <h2>Haryana</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/himachalPradesh.jpg" alt="">
+                        <h2>HimachalPradesh</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/jammuKashmir.jpg" alt="">
+                        <h2>JammuKashmir</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/jharkhand.jfif" alt="">
+                        <h2>Jharkhand</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/karala.jpg" alt="">
+                        <h2>Karala</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/karnataka.jpg" alt="">
+                        <h2>Karnataka</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/MadhayPradesh.jpg" alt="">
+                        <h2>Madhay Pradesh</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/Maharashtra.jpg" alt="">
+                        <h2>Maharashtra</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/manipur.jpg" alt="">
+                        <h2>Manipur</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/meghalaya.jfif" alt="">
+                        <h2>Meghalaya</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/mizoram.jpg" alt="">
+                        <h2>Mizoram</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/nagaland.jpg" alt="">
+                        <h2>Nagaland</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/odisha.jpg" alt="">
+                        <h2>Odisha</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/punjab.jpg" alt="">
+                        <h2>Punjab</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/rajasthan.jpg" alt="">
+                        <h2>Rajasthan</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/sikkim.jpg" alt="">
+                        <h2>Sikkim</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/tamilNadu.png" alt="">
+                        <h2>TamilNadu</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/telangana.jpg" alt="">
+                        <h2>Telangana</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/tripura.jfif" alt="">
+                        <h2>Tripura</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/uttaraKhand.jpg" alt="">
+                        <h2>UttaraKhand</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/uttarPradesh.jpg" alt="">
+                        <h2>UttarPradesh</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/westBengal.jpg" alt="">
+                        <h2>WestBengal</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <div class="gg" id="gg" style="padding-top: 100px;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus laudantium, tempora minus sequi debitis
+        illum accusamus voluptatibus voluptas ea cum modi earum. Itaque voluptatem quae expedita. Perspiciatis beatae,
+        soluta eveniet iure culpa, sunt aut natus at facere quibusdam fugiat. Error dolores magnam blanditiis tempore
+        culpa ullam atque, sunt optio dolor amet ut deleniti nostrum neque quas eveniet provident non inventore!
+        Doloremque sunt inventore debitis, vero ullam molestias iure obcaecati dolor fugit sit nisi culpa eum deserunt
+        veritatis ratione, commodi beatae? Dolore accusamus reiciendis dolor minus nulla optio reprehenderit nesciunt
+        ducimus quas ipsam earum voluptate laborum ab fuga asperiores voluptates nostrum, possimus iusto maxime, alias
+        natus. Alias laborum modi nihil perspiciatis eveniet ipsum quam illum, incidunt minima ex. Facilis explicabo
+        nisi alias doloremque reprehenderit dolores maxime voluptates quos aperiam pariatur possimus perferendis
+        doloribus id nostrum debitis fugit quibusdam, provident voluptatibus cupiditate temporibus amet quod eum
+        assumenda? Recusandae soluta quasi minus beatae ducimus eligendi quae commodi sapiente mollitia perferendis?
+        Saepe a magni impedit? Porro optio, officiis sed eaque aliquid veniam, maiores minus sunt alias dolorum
+        voluptatibus ab ut aperiam eius, molestias voluptatem illum rerum fugiat in eum totam. Perspiciatis accusantium
+        voluptas dolorem enim, incidunt iusto. Velit natus quasi voluptates placeat. Consequatur suscipit assumenda
+        laboriosam porro voluptatum distinctio, aut quisquam quam cupiditate voluptates ipsam ducimus? Maxime repellat
+        consequatur tenetur. Quisquam quia vitae molestias quod quasi iste voluptates, ipsum totam perferendis similique
+        est nam. Ipsum ut assumenda vel aspernatur incidunt. Ea laborum atque recusandae, asperiores corporis ex magnam
+        delectus, eveniet, possimus dolor voluptatem dolores. Dolores voluptatem nihil veritatis ut eum quis sit aut
+        adipisci dignissimos eligendi alias quibusdam, officiis ab voluptatibus molestias cumque, natus iusto sunt sint.
+        Modi, possimus nemo autem neque impedit, odit beatae vitae aut consequuntur esse itaque repellendus doloribus,
+        hic tempore. Veniam voluptatibus consectetur officia tenetur odit. Numquam ducimus explicabo quod? Nulla
+        voluptatibus sint numquam tempore vel ad, laudantium quos odio beatae quas perferendis, id, cum rerum fugit
+        atque. Alias rerum quae est eos nostrum, facilis libero impedit dolores maiores quam temporibus maxime dolorem
+        rem labore cum blanditiis recusandae deleniti ipsum consectetur nobis, sunt assumenda hic ullam earum. Nihil
+        consectetur praesentium accusamus explicabo sint quisquam laboriosam qui. Perspiciatis, ratione. Placeat
+        suscipit, accusamus odit officia a delectus corporis? Accusamus facilis itaque quam repellat repudiandae, quos
+        sint fugit suscipit incidunt praesentium omnis iure consequatur blanditiis earum ab libero consectetur quo
+        laboriosam. Explicabo earum, similique nisi perferendis quasi incidunt blanditiis porro unde rem obcaecati
+        expedita commodi architecto officiis numquam ducimus quisquam reiciendis amet, minus dolores debitis voluptas
+        nesciunt! Molestiae facilis quisquam aliquid porro? Et officia laudantium neque, perferendis id qui unde
+        exercitationem aliquid nobis illum porro excepturi, culpa dolorem nihil eius iure ex asperiores. Facilis sequi
+        numquam asperiores. Inventore rem neque corporis corrupti doloribus repellat alias aliquam veniam modi, in,
+        fugiat perspiciatis, libero ratione sapiente. Blanditiis autem aspernatur eius, sint fugit aliquid similique
+        impedit dolorum sapiente incidunt reiciendis, sit voluptates quas tempore rerum fugiat. Inventore magni velit
+        perferendis voluptates porro, ex dolorum quis laboriosam exercitationem voluptatum, quidem quia doloremque fuga
+        minus fugit cupiditate tenetur iure ipsum aliquid hic sequi voluptas provident libero. Nostrum inventore aut
+        voluptate veritatis nobis ab quidem perspiciatis provident cupiditate a. Rerum ullam quaerat temporibus
+        assumenda nesciunt fugit possimus eligendi quas aut illum, officiis nemo sequi reprehenderit, cum culpa deserunt
+        labore officia tempore voluptates. Vero et deleniti consequuntur distinctio sint quaerat aspernatur vitae cumque
+        repudiandae rem veritatis doloribus officia, ullam unde odio accusamus facilis nostrum itaque blanditiis tempora
+        magni. Voluptatem dignissimos inventore at quisquam amet quas quos consequuntur magnam placeat suscipit,
+        recusandae perspiciatis ipsum id, a iure animi ab aperiam ex nam eum officia voluptates quidem! Exercitationem
+        facilis voluptate quisquam deleniti tempore doloribus nam, dolore recusandae, est quas autem accusantium ratione
+        laboriosam aliquid impedit voluptas omnis distinctio harum eos saepe! Error rem repellat harum incidunt mollitia
+        dolores vitae totam consequuntur vero quos beatae numquam facere aliquid sint dolore libero ut id magni, non
+        exercitationem laboriosam. Molestias quam iure rem nulla pariatur nesciunt ipsam quisquam nam atque? Quos
+        expedita beatae fuga fugit ratione non iure velit voluptatum adipisci distinctio. Obcaecati vero quidem atque
+        ducimus, optio soluta facilis quos repellendus labore laborum sapiente iusto debitis saepe. Neque suscipit
+        mollitia libero! Temporibus pariatur sit distinctio eaque ad sint totam nostrum debitis earum ipsam nisi aut
+        tempora hic cupiditate dolorem mollitia consectetur nesciunt velit, ratione modi necessitatibus? Velit excepturi
+        modi repellendus. Consectetur, aliquid. At, tenetur quia veniam id maiores ducimus enim aliquam tempore numquam
+        expedita praesentium vel, nihil sequi quis ex sit odit eveniet consectetur hic cupiditate commodi et reiciendis!
+        Iste nobis earum animi. Quis corrupti molestias, modi nihil eius animi perspiciatis cupiditate labore, autem
+        accusantium veniam unde ullam iste ut, dicta saepe voluptas magni corporis amet cumque aspernatur ex molestiae
+        inventore. Exercitationem, inventore vitae sunt autem ea ipsam quia? Consequuntur voluptatem consequatur error
+        accusantium, doloremque earum sed maxime, alias dignissimos veritatis eveniet, aperiam reiciendis fugit sequi
+        odit. Blanditiis, nesciunt reprehenderit porro beatae dolorum distinctio provident, fugit, animi nostrum ab
+        libero maxime sapiente. Libero, aut. Nostrum tempora perspiciatis maiores molestias recusandae autem ad
+        voluptatibus? Sequi odio architecto ullam, impedit nulla optio eveniet? Ea ab deleniti soluta, aliquid
+        architecto non sed exercitationem ex est ipsum voluptas ipsa officia, similique sapiente doloribus ut. Quos,
+        corporis quae consequuntur blanditiis assumenda cumque sint quo. In dolorum nam saepe nulla impedit? Cum ab
+        error fuga iure aut aspernatur temporibus dolor reiciendis eveniet magnam. Neque voluptatem tempora excepturi,
+        est modi quia cupiditate labore laudantium, quibusdam alias voluptate deserunt facere nobis? Repellat,
+        accusantium modi. Harum iste repudiandae nulla voluptatem debitis est nostrum? Incidunt repellendus ducimus
+        excepturi, totam labore porro, alias molestias iusto optio odit laudantium harum voluptas dicta, vel quam? Sit
+        eos perferendis, obcaecati nihil laudantium fugiat nostrum neque quisquam possimus nesciunt unde, quia, sunt
+        perspiciatis consectetur ea eligendi dicta cum ullam veritatis. Iusto, accusamus qui. Atque, quis. Maiores
+        facilis dolorem vero assumenda cumque exercitationem sunt non repudiandae rerum inventore? Laborum, blanditiis
+        alias rem repudiandae autem enim sapiente! Deleniti cupiditate quis odit perferendis delectus beatae ad?
+        Mollitia at iure sed. Nisi odit aliquam voluptate beatae corporis neque itaque et sit rerum iure.
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+
+    <!-- ------------- categories --------------- -->
+    <script>
+        const leftArrow = document.getElementById("categories-left-arrow");
+        const rightArrow = document.getElementById("categories-right-arrow");
+        const categoryList = document.getElementById("categories-list");
+
+        rightArrow.addEventListener("click", () => {
+            categoryList.scrollLeft += 200;
+        });
+        leftArrow.addEventListener("click", () => {
+            categoryList.scrollLeft -= 200;
+        });
+
+    </script>
+
+    <!-- ----------- hero section -------------- -->
+    <script>
+        var swiper = new Swiper(".mySwiper-heroSection", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+    <!-- ---------- state images --------- -->
+    <script>
+        var swiper = new Swiper(".mySwiper-stageContainer", {
+            slidesPerView: 5,
+            spaceBetween: 10,
+            freeMode: true,
+            autoplay: {
+                delay: 1000
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+</body>
+
+</html>

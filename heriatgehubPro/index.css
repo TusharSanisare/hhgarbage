@@ -1,0 +1,213 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+}
+
+
+nav{
+    display: flex;
+}
+.nav-links {
+    display: flex;
+    position: absolute;
+    right: 5%;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.537), rgba(0, 0, 0, 0.678)), url(images/hero-background.webp);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    padding: 150px 0;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #f39c12;
+    color: #fff;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e67e22;
+}
+
+/* Placeholder Section Styles */
+.categories,
+.why,
+.artisans,
+.testimonials,
+.subscribe,
+footer {
+    padding: 100px 0;
+    text-align: center;
+}
+
+
+/* ///////////////////////////////////////////////////////////// */
+/* Footer Styles */
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer-links {
+    display: flex;
+    list-style: none;
+}
+
+.footer-links li {
+    margin-right: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-social {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-social span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-social a {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #f39c12;
+}
+
+
+/* Add more styles as needed for other sections */
+
+/* Media Queries */
+@media (max-width: 768px) {
+    /* Add responsive styles here */
+}
+
+
+
+
+
+/* ////////////////////////// category css /////////////////////////////// */
+
+/* Add styling for the category cards */
+.category-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}
+
+.category-card img {
+    max-width: 50%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.category-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.category-button {
+    display: inline-block;
+    background-color: #f39c12;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.category-button:hover {
+    background-color: #e67e22;
+}

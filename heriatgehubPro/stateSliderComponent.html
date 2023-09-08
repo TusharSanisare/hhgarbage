@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>stateSliderComponent</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            font-family: Inconsolata;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* //////////////////////////////////////////////////////////////////////////// */
+
+        .img-container {
+            padding: 0 10px;
+            height: 220px;
+            width: auto;
+        }
+
+        .img-box {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            width: 300px;
+            background-color: black;
+        }
+
+        .img-box h2 {
+            text-shadow: 0px 0px 15px black;
+            color: #ffffff;
+            font-size: 25px;
+            position: absolute;
+            transition-duration: 0.5s;
+        }
+
+        .swiper-slide img {
+            opacity: 0.7;
+            transition-duration: 0.5s;
+        }
+
+        .swiper-slide:hover h2 {
+            opacity: 0.5;
+        }
+
+        .swiper-slide:hover img {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img-container">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/andraPradesh.jpeg" alt="">
+                        <h2>AndraPradesh</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/arunachaPradesh.jpg" alt="">
+                        <h2>ArunachaPradesh</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/assam.jpg" alt="">
+                        <h2>Assam</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/bihar.jpg" alt="">
+                        <h2>Bihar</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/chhattisgarh.jpg" alt="">
+                        <h2>Chhattisgarh</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/delhi.jpg" alt="">
+                        <h2>Delhi</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/goa.jpg" alt="">
+                        <h2>Goa</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/gujarat.jpg" alt="">
+                        <h2>Gujarat</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/haryana.jpg" alt="">
+                        <h2>Haryana</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/himachalPradesh.jpg" alt="">
+                        <h2>HimachalPradesh</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/jammuKashmir.jpg" alt="">
+                        <h2>JammuKashmir</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/jharkhand.jfif" alt="">
+                        <h2>Jharkhand</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/karala.jpg" alt="">
+                        <h2>Karala</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/karnataka.jpg" alt="">
+                        <h2>Karnataka</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/MadhayPradesh.jpg" alt="">
+                        <h2>Madhay Pradesh</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/Maharashtra.jpg" alt="">
+                        <h2>Maharashtra</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/manipur.jpg" alt="">
+                        <h2>Manipur</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/meghalaya.jfif" alt="">
+                        <h2>Meghalaya</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/mizoram.jpg" alt="">
+                        <h2>Mizoram</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/nagaland.jpg" alt="">
+                        <h2>Nagaland</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/odisha.jpg" alt="">
+                        <h2>Odisha</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/punjab.jpg" alt="">
+                        <h2>Punjab</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/rajasthan.jpg" alt="">
+                        <h2>Rajasthan</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/sikkim.jpg" alt="">
+                        <h2>Sikkim</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/tamilNadu.png" alt="">
+                        <h2>TamilNadu</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/telangana.jpg" alt="">
+                        <h2>Telangana</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/tripura.jfif" alt="">
+                        <h2>Tripura</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/uttaraKhand.jpg" alt="">
+                        <h2>UttaraKhand</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/uttarPradesh.jpg" alt="">
+                        <h2>UttarPradesh</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <img src="/images/westBengal.jpg" alt="">
+                        <h2>WestBengal</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 5,
+            spaceBetween: 10,
+            freeMode: true,
+            autoplay: {
+                delay: 1000
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+
+</html>
