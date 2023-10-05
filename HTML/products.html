@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>heritagehub - find and sale your heritage art</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/CSS/products.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo" id="navlogo">heritagehub</div>
+        <ul id="navLinksList">
+            <li class="list"><a href="/HTML/index.html" id="navLinkHome" class="navLink">Home</a></li>
+            <li class="list"><a href="/HTML/login.html" id="navLinkLogin" class="navLink">Login</a></li>
+            <li class="list"><a href="#" id="navLinkBecomeSeller" class="navLink">Become Seller</a></li>
+            <li class="list"><a href="#" id="navLinkCart" class="navLink">Cart <i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+        <form action="#">
+            <div class="searchBar">
+                <input id="navSearchBarInput" type="text" placeholder="Search your product">
+                <button id="navSearchBarButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </form>
+    </nav>
+
+    <div class="scroll-cantainer">
+        <div class="left-arrow">
+            <i class="fa-solid fa-chevron-left arrow" id="categories-left-arrow"></i>
+        </div>
+        <ul id="categories-list">
+            <li class="link"><a href="#" id="catListAll" class="catLink">All</a></li>
+            <li class="link"><a href="#" id="catListPaintings" class="catLink">Paintings</a></li>
+            <li class="link"><a href="#" id="catListCloths" class="catLink">Cloths</a></li>
+            <li class="link"><a href="#" id="catListWoodCraft" class="catLink">Wood Craft</a></li>
+            <li class="link"><a href="#" id="catListEmbroidery" class="catLink">Embroidery</a></li>
+            <li class="link"><a href="#" id="catListToys" class="catLink">Toys</a></li>
+            <li class="link"><a href="#" id="catListMetalWork" class="catLink">Metal Work</a></li>
+            <li class="link"><a href="#" id="catListCarpets" class="catLink">Carpets</a></li>
+            <li class="link"><a href="#" id="catListBambooCraft" class="catLink">Bamboo Craft</a></li>
+            <li class="link"><a href="#" id="catListJewellery" class="catLink">Jewellery</a></li>
+        </ul>
+        <div class="right-arrow">
+            <i class="fa-solid fa-chevron-right arrow" id="categories-right-arrow"></i>
+        </div>
+    </div>
+ 
+    <div class="product-container">
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/picture2.jpg');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/picture.jpg');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/product-2/indian-crafts.jpg');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/product-3/Wall-Art1.webp');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/product-4/earing1.webp');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/picture2.jpg');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/picture.jpg');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/product-2/indian-crafts.jpg');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/product-3/Wall-Art1.webp');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/product-4/earing1.webp');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/picture2.jpg');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/picture.jpg');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/product-2/indian-crafts.jpg');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/product-3/Wall-Art1.webp');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/product-4/earing1.webp');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/picture2.jpg');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/picture.jpg');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/product-2/indian-crafts.jpg');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/product-3/Wall-Art1.webp');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/product-4/earing1.webp');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/picture2.jpg');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/picture.jpg');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/product-2/indian-crafts.jpg');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/product-3/Wall-Art1.webp');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/product-4/earing1.webp');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/picture2.jpg');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/picture.jpg');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/product-2/indian-crafts.jpg');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/product-3/Wall-Art1.webp');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        <a class="productCard" href="/HTML/productPage.html">
+            <div class="pro-img" style="background-image: url('/IMAGE/product-4/earing1.webp');"></div>
+            <p class="catgoryName">Category Names</p>
+            <h2 class="productName">Product Title Name</h2>
+            <p class="sallerName">Saller name</p>
+            <p class="productDiscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                similique itaque molestiae dolorum? Accusamus vel maiores amet sapiente, repudiandae eligendi.</p>
+            <div class="cardOptions">
+                <p class="price">Rs 300/-</p>
+                <div class="cardDiv">
+                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <div class="rating">4 <i class="fa-solid fa-star star"></i></div>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <h3 class="company">heritagehub</h3>
+            <p class="footer-links">
+                <a class="link" href="#" class="link-1">Home</a>
+
+                <a class="link" href="#">Blog</a>
+
+                <a class="link" href="#">Pricing</a>
+
+                <a class="link" href="#">About</a>
+
+                <a class="link" href="#">QNA</a>
+
+                <a class="link" href="#">Contact</a>
+            </p>
+            <p class="footer-company-name">heritagehub © 2023</p>
+        </div>
+
+        <div class="footer-center">
+
+            <div>
+                <i class="ancor fa fa-map-marker"></i>
+                <p class="text"><span class="span">444 S. Cedros Ave</span> Solana Beach, California</p>
+            </div>
+
+            <div>
+                <i class="ancor fa fa-phone"></i>
+                <p class="text">+1.555.555.5555</p>
+            </div>
+
+            <div>
+                <i class="ancor fa fa-envelope"></i>
+                <p class="text"><a class="link" href="mailto:support@company.com">support@heritagehub.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span class="span">About the company</span>
+                Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus
+                vehicula sit amet.
+            </p>
+
+            <div class="footer-icons">
+
+                <a class="link" href="#"><i class="fa-brands fa-facebook ancor"></i></i></a>
+                <a class="link" href="#"><i class="fa-brands fa-twitter ancor"></i></a>
+                <a class="link" href="#"><i class="fa-brands fa-linkedin ancor"></i></a>
+                <a class="link" href="#"><i class="fa-brands fa-github ancor"></i></a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="/SCRIPT/categoryNavbar.js"></script>
+
+</body>
+
+</html>

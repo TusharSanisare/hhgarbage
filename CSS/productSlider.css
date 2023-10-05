@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+
+}
+
+
+
+
+
+
+
+.productCardContainer {
+    margin: 20px 0;
+    height: 450px;
+    width: 100%;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    padding: 25px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    transition-duration: 0.3s;
+
+    .product-card-list {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+
+        .productCard {
+            position: relative;
+            border: 1px solid rgba(0, 0, 0, 0.6);
+            padding: 8px;
+            height: 100%;
+            width: 300px;
+            margin: 10px;
+
+            .catgoryName {
+                font-size: 12px;
+                margin-top: 8px;
+                font-weight: 700;
+            }
+
+            .productName {
+                font-size: 16px;
+                margin-top: 8px;
+            }
+
+            .sallerName {
+                color: rgba(0, 0, 0, 0.7);
+                font-weight: 500;
+                font-size: 14px;
+            }
+
+            .productDiscription {
+                color: rgba(0, 0, 0, 0.8);
+                margin-top: 8px;
+                font-size: 12px;
+            }
+
+            .cardOptions {
+                position: absolute;
+                width: 94%;
+                padding: 0 20px;
+                bottom: 8px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .cardDiv {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 10px;
+                }
+
+                .rating {
+                    border: 1px solid rgba(0, 0, 0, 0.7);
+                    padding: 0 5px;
+                    border-radius: 5px;
+
+                    .star {
+                        color: orange;
+                    }
+                }
+
+                .cart:hover {
+                    color: orange;
+                }
+
+                .heart:hover {
+                    color: red;
+                }
+
+
+                .price {
+                    border: 1px solid rgba(0, 0, 0, 0.7);
+                    padding: 0 5px;
+                    border-radius: 5px;
+                    font-weight: bolder;
+                    transition-duration: 0.3s;
+                }
+            }
+
+            .productCardImg {
+                object-fit: cover;
+                height: 50%;
+                width: 100%;
+            }
+        }
+
+        .productCard:hover {
+            border: 2px solid orange;
+
+            .price {
+                border: none;
+                background-color: orange;
+                color: rgb(255, 255, 255);
+            }
+        }
+    }
+
+    .product-card-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .left-arrow,
+    .right-arrow {
+        height: 100%;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0%;
+        z-index: 1;
+
+
+        #product-left-arrow,
+        #product-right-arrow {
+            font-size: 50px;
+            transition-duration: 0.3s;
+            color: rgba(0, 0, 0, 0.637);
+        }
+
+        #product-left-arrow:hover,
+        #product-right-arrow:hover {
+            color: rgba(255, 166, 0, 0.799);
+        }
+    }
+
+    .left-arrow {
+        left: 0%;
+        background: linear-gradient(to right, white 50%, transparent);
+    }
+
+    .right-arrow {
+        right: 0%;
+        background: linear-gradient(to left, white 50%, transparent);
+    }
+
+
+
+}

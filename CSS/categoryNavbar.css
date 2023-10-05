@@ -1,0 +1,79 @@
+.scroll-cantainer {
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin: 5px auto;
+    overflow: hidden;
+
+    #categories-list {
+        display: flex;
+        gap: 60px;
+        list-style: none;
+        margin: 0;
+        padding: 12px 60px;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+
+        .catLink {
+            color: black;
+            border: 1px solid rgba(0, 0, 0, 0.614);
+            text-decoration: none;
+            padding: 4px 24px;
+            display: inline-block;
+            border-radius: 4px;
+            user-select: none;
+            white-space: nowrap;
+        }
+
+        .catLink.active {
+            background-color: orange;
+            border: 1px solid orange;
+        }
+
+        .catLink:hover {
+            border: 1px solid orange;
+        }
+
+    }
+
+    #categories-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .right-arrow,
+    .left-arrow {
+        position: absolute;
+        height: 100%;
+        width: 90px;
+        top: 0;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+
+        .arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            padding: 8px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .arrow:hover {
+            background-color: #00000009;
+        }
+    }
+
+    .right-arrow {
+        right: 0;
+        justify-content: flex-end;
+        background: linear-gradient(to left, white 50%, transparent);
+    }
+
+    .left-arrow {
+        background: linear-gradient(to right, white 50%, transparent);
+    }
+}

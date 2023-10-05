@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+
+
+
+
+
+
+
+nav {
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    #navlogo {
+        color: orange;
+        font-size: 30px;
+        font-weight: bolder;
+    }
+
+    #navLinksList {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+
+        .list {
+            margin: 0 20px;
+
+            .navLink {
+                text-decoration: none;
+                color: black;
+                transition: ease-in-out;
+                transition-duration: 0.2s;
+            }
+            .navLink:hover, .navLink.active{
+                color: orange;
+            }
+        }
+    }
+
+
+    .searchBar {
+        margin: 1px;
+        border: 1px solid orange;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        transition: ease-in-out;
+        transition-duration: 0.2s;
+
+        #navSearchBarInput {
+            border: none;
+            text-align: center;
+            height: 30px;
+            width: 200px;
+        }
+        #navSearchBarInput:focus {
+            outline: none;
+        }
+
+        #navSearchBarButton {
+            border: none;
+            background-color: orange;
+            text-align: center;
+            height: 30px;
+            width: 30px;
+            transition: ease-in-out;
+            transition-duration: 0.1s;
+        }
+        #navSearchBarButton:hover {
+            font-size: large;
+        }
+
+
+    }
+    .searchBar:hover {
+        margin: 0;
+        border: 2px solid orange;
+    }
+    
+
+}
+
+
+
+
+
+
+
+
+ 
+
