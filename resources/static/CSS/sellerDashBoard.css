@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+/* ------------------------------------- main navbar ---------------------------- */
+nav {
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    #navlogo {
+        font-family: 'Open Sans', cursive;
+        color: orange;
+        font-size: 30px;
+        font-weight: bolder;
+    }
+
+    #navLinksList {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+
+        .list {
+            margin: 0 20px;
+
+            .navLink {
+                text-decoration: none;
+                color: black;
+                transition: ease-in-out;
+                transition-duration: 0.2s;
+            }
+
+            .navLink:hover,
+            .navLink.active {
+                color: orange;
+            }
+        }
+
+        .profile {
+            .profileOptions {
+                display: none;
+                color: white;
+                position: absolute;
+                z-index: 99;
+
+                >ul {
+                    padding: 10px;
+                    margin: 15px 0;
+                    background-color: rgb(255, 255, 255);
+                    border-radius: 5px;
+                    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.404);
+                    list-style: none;
+
+                    >li {
+                        margin: 25px;
+                    }
+                }
+            }
+        }
+
+        .profile:hover {
+            color: orange;
+
+            .profileOptions {
+                display: block;
+            }
+
+            .profileArrow {
+                transition-duration: 0.2s;
+                position: relative;
+                rotate: 180deg;
+            }
+        }
+    }
+
+
+    .searchBar {
+        margin: 1px;
+        border: 1px solid orange;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        transition: ease-in-out;
+        transition-duration: 0.2s;
+
+        #navSearchBarInput {
+            border: none;
+            text-align: center;
+            height: 30px;
+            width: 200px;
+        }
+
+        #navSearchBarInput:focus {
+            outline: none;
+        }
+
+        #navSearchBarButton {
+            border: none;
+            background-color: orange;
+            text-align: center;
+            height: 30px;
+            width: 30px;
+            transition: ease-in-out;
+            transition-duration: 0.1s;
+        }
+
+        #navSearchBarButton:hover {
+            font-size: large;
+        }
+
+
+    }
+
+    .searchBar:hover {
+        margin: 0;
+        border: 2px solid orange;
+    }
+
+
+}
+
+/* ----------------------------------- main ---------------------------- */
+.main {
+    margin: 20px 0;
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    height: 90vh;
+    column-gap: 8px;
+
+
+    .main-left {
+        height: 100%;
+        width: 25%;
+        border: 1px solid rgba(0, 0, 0, 0.6);
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        background-color: rgba(255, 166, 2, 0.712);
+        /* background: linear-gradient(to Right, rgba(255, 166, 2, 0.342), rgb(255, 255, 255)); */
+        background: linear-gradient(to left, rgba(255, 166, 2, 0.342), rgb(253, 199, 98));
+
+        >h1 {
+            margin: 20px;
+        }
+
+        >ul {
+            list-style: none;
+            padding: 10px 0;
+
+
+
+
+            >li {
+                margin: 2px 10px;
+                padding: 13px;
+                border-radius: 5px;
+                transition: ease-in-out;
+                transition-duration: 0.2s;
+
+                >a {
+                    color: #000000;
+                    text-decoration: none;
+                    transition: ease-in-out;
+                    transition-duration: 0.2s;
+
+                    >i {
+                        padding: 5px;
+                    }
+                }
+            }
+
+            >li:hover,
+            >li.active {
+                background-color: rgba(255, 166, 0, 0.742);
+
+                >a {
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+
+    .main-left::-webkit-scrollbar {
+        display: none;
+    }
+
+    .main-right {
+        height: 100%;
+        width: 75%;
+        border: 1px solid rgba(0, 0, 0, 0.6);
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .displayNone{
+            display: none;
+        }
+
+        .profile-container {
+            border: 1px solid rgb(0, 0, 0, 0.6);
+            background-color: rgb(255, 249, 237);
+            width: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+
+
+            .profile {
+                height: 100%;
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+
+
+
+                >input {
+                    border-radius: 0;
+                    border: 1px solid rgb(0, 0, 0, 0.6);
+                    height: 35px;
+                    margin-bottom: 20px;
+                    text-indent: 10px;
+                }
+
+                >input:focus,
+                >input:hover {
+                    outline: none;
+                    /* border: 1px solid orange; */
+                    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+                }
+                
+                
+
+                .btn {
+                    border-radius: 3px;
+                    border: none;
+                    width: 150px;
+                    margin: 0;
+                    background-color: orange;
+                    font-size: 15px;
+                    font-weight: 700;
+                    color: white;
+                }
+
+                .btn:hover {
+                    cursor: pointer;
+                    background-color: rgb(208, 136, 1);
+                }
+
+				::placeholder {
+					color: black;
+					opacity: 1; 
+				}
+				::-ms-input-placeholder {
+				  color: black;
+				}
+
+            }
+        }
+
+        .addProduct-container {
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgb(0, 0, 0, 0.6);
+            background-color: rgb(255, 249, 237);
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+
+
+            .add {
+                display: flex;
+                flex-direction: column;
+
+                .select-option {
+                    border-radius: 0;
+                    border: 1px solid rgb(0, 0, 0, 0.6);
+                    height: 25px;
+                    margin-bottom: 20px;
+                    text-indent: 10px;
+                }
+
+                >input {
+                    border-radius: 0;
+                    border: 1px solid rgb(0, 0, 0, 0.6);
+                    height: 25px;
+                    margin-bottom: 10px;
+                    text-indent: 10px;
+                }
+
+                >input:focus,
+                >input:hover {
+                    outline: none;
+                    border: 1px solid orange;
+                }
+
+                .images {
+                    background: white;
+                    border: 1px solid rgb(0, 0, 0, 0.6);
+                    padding: 5px;
+                    margin-bottom: 10px;
+                }
+
+                #img1,
+                #img2,
+                #img3,
+                #img4,
+                #img5 {
+                    border: none;
+                    padding: 2px;
+                }
+
+                .btn {
+                    border-radius: 3px;
+                    border: none;
+                    width: 150px;
+                    margin: 0;
+                    background: orange;
+                    font-size: 15px;
+                    font-weight: 700;
+                    color: white;
+                }
+
+                .btn:hover {
+                    cursor: pointer;
+                    background: rgb(208, 136, 1);
+                }
+
+
+            }
+        }
+    }
+}
+
+/* --------------------------------------- footer ---------------------------- */
+.footer-distributed {
+    margin-top: 200px;
+    background: rgb(255, 186, 57);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+    color: #fff;
+
+
+
+
+
+
+    /* Footer left */
+    .footer-left {
+        width: 40%;
+        display: inline-block;
+        vertical-align: top;
+
+        .company {
+            font: normal 36px 'Open Sans', cursive;
+            margin: 0;
+        }
+
+        .footer-links {
+            margin: 20px 0 12px;
+            padding: 0;
+
+            .link {
+                display: inline-block;
+                line-height: 1.8;
+                font-weight: 400;
+                text-decoration: none;
+                color: inherit;
+            }
+
+            .link:before {
+                content: "|";
+                font-weight: 300;
+                font-size: 20px;
+                left: 0;
+                display: inline-block;
+                padding-right: 5px;
+            }
+        }
+
+        .footer-company-name {
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0;
+        }
+    }
+
+    /* Footer Center */
+    .footer-center {
+        display: inline-block;
+        vertical-align: top;
+        width: 35%;
+
+
+        .ancor {
+            background-color: #000000;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            text-align: center;
+            margin: 10px 15px;
+            vertical-align: middle;
+            font-size: 17px;
+            line-height: 38px;
+        }
+
+        .text {
+            display: inline-block;
+            font-weight: 400;
+            vertical-align: middle;
+            margin: 0;
+
+            .span {
+                display: block;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 2;
+            }
+
+            .link {
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }
+
+    /* Footer Right */
+    .footer-right {
+        width: 20%;
+        display: inline-block;
+        vertical-align: top;
+
+        .footer-company-about {
+            line-height: 20px;
+            font-size: 13px;
+            font-weight: normal;
+            margin: 0;
+
+            .span {
+                display: block;
+                font-size: 14px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+        }
+
+
+        .footer-icons {
+            margin-top: 25px;
+
+            .link {
+                display: inline-block;
+                width: 35px;
+                height: 35px;
+                cursor: pointer;
+                background-color: #000000;
+                border-radius: 2px;
+                color: #fff;
+                font-size: 20px;
+                text-align: center;
+                line-height: 35px;
+                margin-right: 3px;
+                margin-bottom: 5px;
+
+            }
+        }
+    }
+}
+
+/* ------------------------------------- title ---------------------------- */
+.subTitle {
+    color: #2d2d2dd8;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 150px;
+    margin-bottom: 25px;
+}
+
+/* ------------------------------------- state slider ---------------------------- */

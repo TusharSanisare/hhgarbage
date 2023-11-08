@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" th:href="@{/CSS/sellerRegister.css}">
+</head>
+
+<body>
+
+
+    <div class="form_wrapper">
+        <div class="form_container">
+            <div class="title_container">
+                <h2>Create Seller Account</h2>
+            </div>
+            <div class="row clearfix">
+                <form action="/seller" method="post">
+
+                    <div class="input_field">
+                        <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                        <input type="text" name="name" placeholder="Full name" required />
+                    </div>
+                    <div class="input_field">
+                        <span><i aria-hidden="true" class="fa fa-shop"></i></span>
+                        <input type="text" name="Company" placeholder="Company/Shop Name" required />
+                    </div>
+                    <div class="input_field">
+                        <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                        <input type="email" name="email" placeholder="Email" required />
+                    </div>
+                    <div class="input_field">
+                        <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                        <input type="text" name="phone" placeholder="Phone NO." required />
+                    </div>
+                    <div class="input_field">
+                        <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                        <input type="password" name="password" placeholder="Password" required />
+                    </div>
+                    <div class="input_field">
+                        <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                        <input type="password" name="password1" placeholder="Re-type Password" required />
+                    </div>
+                    <div class="input_field radio_option">
+                        <input type="radio" name="gender" id="rd1" value="male">
+                        <label for="rd1">Male</label>
+                        <input type="radio" name="gender" id="rd2" value="female">
+                        <label for="rd2">Female</label>
+                        <input type="radio" name="gender" id="rd3" value="other">
+                        <label for="rd3">Other</label>
+                    </div>
+                    <div class="input_field checkbox_option">
+                        <input type="checkbox" id="cb1">
+                        <label for="cb1">I agree with terms and conditions</label>
+                    </div>
+                    <input class="button" type="submit" value="Register" />
+                </form>
+                <p class="p">Already have an Account? <a href="/sellerLogin" class="login">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

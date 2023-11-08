@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/CSS/login.css}">
+</head>
+
+<body>
+    <div class="main">
+        <div class="image">
+            <!-- <img class="img" src="//IMAGE/picture2.jpg" alt=""> -->
+        </div>
+        <div class="detail-container">
+
+            <form class="form" action="/userLogin" method="post">
+                <h2 class="title">Login</h2>
+                <label class="label" for="username">Email</label>
+                <input class="input" type="email" name="email" id="email" placeholder="Enter email">
+                <label class="label" for="password">Password</label>
+                <input class="input" type="password" name="password" id="password" placeholder="Enter password">
+                <input class="submit" type="submit" value="Login">
+                <p class="p">Don't have an Account? <a href="/register" class="register">Create Account</a></p>
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>

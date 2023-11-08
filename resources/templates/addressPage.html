@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" th:href="@{/CSS/addressPage.css}">
+</head>
+
+<body>
+
+
+    <div class="form_wrapper">
+        <div class="form_container">
+            <div class="title_container">
+                <h2>Add Shipping Address</h2>
+            </div>
+            <div class="row clearfix">
+                <form action="/address" method="post">
+
+                    <div class="input_field select_option">
+                        <select name="country">
+                            <option value="">Select a country</option>
+                            <option value="America">America</option>
+                            <option value="China">China</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Germany">Germany</option>
+                            <option value="India">India</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="France">France</option>
+                            <option value="Italy">Italy</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Russia">Russia</option>
+                        </select>
+                        <div class="select_arrow"></div>
+                    </div>
+                    <div class="input_field">
+                        <span><i aria-hidden="true" class="fa-solid fa-location-dot"></i></span>
+                        <input type="text" name="state" placeholder="State" required />
+                    </div>
+                    <div class="input_field">
+                        <span><i aria-hidden="true" class="fa-solid fa-road"></i></span>
+                        <input type="text" name="address" placeholder="Complite Address" required />
+                    </div>
+                    <div class="input_field">
+                        <span><i aria-hidden="true" class="fa-solid fa-location-crosshairs"></i></span>
+                        <input type="text" name="nearBy" placeholder="Near By" required />
+                    </div>
+                    <div class="input_field">
+                        <span><i aria-hidden="true" class="fa-solid fa-quote-left"></i></span>
+                        <input type="text" name="pincode" placeholder="PIN Code" required />
+                    </div>
+                    
+                    <input class="button" type="submit" value="ADD" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

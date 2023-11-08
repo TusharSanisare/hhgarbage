@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>heritagehub - find and sale your heritage art</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" th:href="@{/CSS/sellerDashBoard.css}">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo" id="navlogo">heritagehub</div>
+        <!--<h2>Wellcome <span th:text="${id}"></span></h2>-->
+        <h3>Heritagehub Seller Dashboard/Notifications</h3>
+        <form action="#">
+            <div class="searchBar">
+                <input id="navSearchBarInput" type="text" placeholder="Search your product">
+                <button id="navSearchBarButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </form>
+    </nav>
+
+
+    <div class="main">
+        <div class="main-left">
+            <h1><i class="fa-solid fa-bars"></i> DashBoard</h1>
+            <ul>
+                <li class="" id="profile"><a th:href="@{'/seller/profile/' + ${id}}"><i class="fa-solid fa-user"></i> Profile</a></li>
+                <li class="" id="add"><a th:href="@{'/seller/addProduct/' + ${id}}"><i class="fa-solid fa-square-plus"></i> Add Products</a></li>
+                <li class="" id="view"><a th:href="@{'/seller/viewProduct/' + ${id}}"><i class="fa-solid fa-eye"></i> View Products</a></li>
+                <li class="" id="history"><a th:href="@{'/seller/orderHistory/' + ${id}}"><i class="fa-solid fa-clipboard"></i> Order History</a></li>
+                <li class="" id="newOrder"><a th:href="@{'/seller/newOrder/' + ${id}}"><i class="fa-solid fa-folder-open"></i> New Order</a></li>
+                <li class="active" id="notification"><a th:href="@{'/seller/notification/' + ${id}}"><i class="fa-solid fa-envelope"></i> Notifications</a></li>
+                <li class="" id="setting"><a th:href="@{'/seller/setting/' + ${id}}"><i class="fa-solid fa-gear"></i> Setting</a></li>
+                <li class="" id="logout"><a href="/index"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+            </ul>
+        </div>
+        <div class="main-right">
+
+
+            <!-- <div id="profile" class="profile-container">
+                <form action="#" class="profile">
+
+                    <input type="text" name="id" id="id" placeholder="id" style="display: none;">
+
+                    <label for="name">UserName</label>
+                    <input type="text" name="name" id="name" placeholder="SellerName">
+
+                    <label for="name">Company/Shop</label>
+                    <input type="text" name="company" id="company" placeholder="Company/Shop">
+
+                    <label for="name">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="email">
+
+                    <label for="name">Phone NO.</label>
+                    <input type="text" name="phone" id="phone" placeholder="phone">
+
+                    <label for="name">password</label>
+                    <input type="text" name="password" id="password" placeholder="password">
+
+                    <input class="btn" type="submit" value="Save Changes">
+                </form>
+            </div>
+
+            <div id="add" class="addProduct-container">
+
+                <form action="#" class="add">
+
+                    <label for="categoryName">Enter Category Name</label>
+                    <select required name="categoryName" class="select-option">
+                        <option value="" disabled selected hidden>Select Category</option>
+                        <option value="paintings">paintings</option>
+                        <option value="cloths">cloths</option>
+                        <option value="woodCraft">wood craft</option>
+                        <option value="embroidery">embroidery</option>
+                        <option value="toys">toys</option>
+                        <option value="metalWork">metal work</option>
+                        <option value="carpets">carpets</option>
+                        <option value="bombooCraft">bomboo craft</option>
+                        <option value="jewellery">jewellery</option>
+                        <option value="other">other</option>
+                    </select>
+
+
+                    <label for="productName">Product Name</label>
+                    <input required type="text" name="productName" id="productName" placeholder="eg : kashmiri sari">
+
+                    <label for="Description">Product Description</label>
+                    <input required type="email" name="Description" id="Description" placeholder="max 50 words">
+
+                    <label for="price">Product Price</label>
+                    <input required type="text" name="price" id="price" placeholder="price in Rs">
+
+                    <label for="images">Upload Images</label>
+                    <div class="images">
+                        <input type="file" id="img1" name="img1" accept="image/*" required>
+                        <input type="file" id="img2" name="img2" accept="image/*">
+                        <input type="file" id="img3" name="img3" accept="image/*">
+                        <input type="file" id="img4" name="img4" accept="image/*">
+                        <input type="file" id="img5" name="img5" accept="image/*">
+                    </div>
+                    <input class="btn" type="submit" value="Add Product">
+                </form>
+
+
+            </div> -->
+            
+            <h1>dashboard/Notification</h1>
+
+        </div>
+    </div>
+
+
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <h3 class="company">heritagehub</h3>
+            <p class="footer-links">
+                <a class="link" href="#">Home</a>
+
+                <a class="link" href="#">Blog</a>
+
+                <a class="link" href="#">Pricing</a>
+
+                <a class="link" href="#">About</a>
+
+                <a class="link" href="#">QNA</a>
+
+                <a class="link" href="#">Contact</a>
+            </p>
+            <p class="footer-company-name">heritagehub © 2023</p>
+        </div>
+
+        <div class="footer-center">
+
+            <div>
+                <i class="ancor fa fa-map-marker"></i>
+                <p class="text"><span class="span">444 S. Cedros Ave</span> Solana Beach, California</p>
+            </div>
+
+            <div>
+                <i class="ancor fa fa-phone"></i>
+                <p class="text">+1.555.555.5555</p>
+            </div>
+
+            <div>
+                <i class="ancor fa fa-envelope"></i>
+                <p class="text"><a class="link" href="mailto:support@company.com">support@heritagehub.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span class="span">About the company</span>
+                Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus
+                vehicula sit amet.
+            </p>
+
+            <div class="footer-icons">
+
+                <a class="link" href="#"><i class="fa-brands fa-facebook ancor"></i></i></a>
+                <a class="link" href="#"><i class="fa-brands fa-twitter ancor"></i></a>
+                <a class="link" href="#"><i class="fa-brands fa-linkedin ancor"></i></a>
+                <a class="link" href="#"><i class="fa-brands fa-github ancor"></i></a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+</body>
+
+</html>
